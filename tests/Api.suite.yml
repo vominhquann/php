@@ -1,0 +1,11 @@
+actor: ApiTester
+suite_namespace: Tests\Api
+modules:
+    # enable helpers as array
+   enabled:
+     - REST: 
+        url: http://178.128.88.120:88/
+        depends: PhpBrowser
+        part: Json
+step_decorators:
+    - \Codeception\Step\AsJson
